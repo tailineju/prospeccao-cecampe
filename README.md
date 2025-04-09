@@ -1,1 +1,35 @@
-# prospeccao-cecampe
+# 📞 Prospecção CECAMPE
+
+Aplicativo interativo desenvolvido para apoiar as ações de prospecção de escolas no âmbito do projeto **CECAMPE**, com foco no **monitoramento do financiamento público educacional**.
+
+O sistema permite registrar chamadas telefônicas realizadas para escolas, verificar e confirmar dados existentes, coletar informações importantes sobre o PDDE (Programa Dinheiro Direto na Escola), e organizar agendamentos para conversas futuras com a equipe de assessoria.
+
+---
+
+## 🌐 Acesse o app online
+
+🔗 [https://prospeccao-cecampe.streamlit.app/](https://prospeccao-cecampe.streamlit.app/)
+
+---
+
+## 🚀 Funcionalidades atuais
+
+- Busca por nome da escola com exibição de dados (endereço, telefone, UEx etc.)
+- Registro de ligações conforme roteiro estruturado
+- Coleta de dados sobre conhecimento e recebimento do PDDE
+- Agendamento de conversas futuras
+- Armazenamento local em arquivos Excel (`ligacoes.xlsx` e `escolas.xlsx`)
+
+---
+
+## 🛠️ Requisitos para execução local
+
+- Python 3.9 ou superior
+- [Streamlit](https://streamlit.io/)
+- Pandas
+- Openpyxl
+
+### Instale com:
+
+```bash
+pip install -r requirements.txt
