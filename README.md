@@ -29,3 +29,23 @@ O sistema permite registrar chamadas telefônicas realizadas para escolas, verif
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Execute localmente com:
+
+```bash
+streamlit run app.py
+```
+
+## Estrutura dos arquivos
+
+- `app.py`: Código principal do app em Streamlit  
+- `escolas.xlsx`: Base de dados com informações das escolas  
+- `ligacoes.xlsx`: Registro de ligações realizadas  
+- `requirements.txt`: Dependências do projeto
+
+## 📌 Licença
+
+Projeto de uso interno, adaptado às necessidades do projeto. 
+**Uso autorizado apenas mediante consentimento da equipe responsável.**
+
