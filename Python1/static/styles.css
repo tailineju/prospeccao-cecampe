@@ -1,0 +1,9 @@
+.kanban {
+    display: flex;
+    gap: 20px;
+}
+.coluna {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+}

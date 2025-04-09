@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM para Escolas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>CRM para Escolas</h1>
+    <form action="{{ url_for('buscar') }}" method="POST">
+        <label for="codigo">Código da Escola:</label>
+        <input type="text" id="codigo" name="codigo" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if escola %}
+    <div>
+        <h2>{{ escola.nome_escola }}</h2>
+        <p>Diretor: {{ escola.nome_diretor }}</p>
+        <p>Telefone: {{ escola.telefone }}</p>
+        <p>Status: {{ escola.status }}</p>
+        <form action="{{ url_for('atualizar') }}" method="POST">
+            <input type="hidden" name="codigo" value="{{ escola.codigo_escola }}">
+            <select name="status">
+                <option value="Aguardando Contato">Aguardando Contato</option>
+                <option value="Chamada Agendada">Chamada Agendada</option>
+                <option value="Chamada Não Atendida">Chamada Não Atendida</option>
+                <option value="Coleta de Dados Concluída">Coleta de Dados Concluída</option>
+            </select>
+            <button type="submit">Atualizar Status</button>
+        </form>
+    </div>
+    {% endif %}
+
+    {% if erro %}
+    <p style="color: red;">{{ erro }}</p>
+    {% endif %}
+
+    <h2>Kanban de Status</h2>
+    <div class="kanban">
+        {% for status in dados["status"].unique() %}
+        <div class="coluna">
+            <h3>{{ status }}</h3>
+            <ul>
+                {% for _, row in dados[dados["status"] == status].iterrows() %}
+                <li>{{ row.nome_escola }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
