@@ -1,18 +1,15 @@
-# 📞 Prospecção CECAMPE
+# 📞 Busca Ativa e Assessoria 
 
-Aplicativo interativo desenvolvido para apoiar as ações de prospecção de escolas no âmbito do projeto **CECAMPE**, com foco no **monitoramento do financiamento público educacional**.
+Aplicativo interativo desenvolvido para apoiar as ações de prospecção de escolas no âmbito do projeto -censura-, com foco no **monitoramento do financiamento público educacional**.
 
 O sistema permite registrar chamadas telefônicas realizadas para escolas, verificar e confirmar dados existentes, coletar informações importantes sobre o PDDE (Programa Dinheiro Direto na Escola), e organizar agendamentos para conversas futuras com a equipe de assessoria.
 
----
-
-## 🌐 Acesse o app online
+## Acesse o app online
 
 🔗 [https://prospeccao-cecampe.streamlit.app/](https://prospeccao-cecampe.streamlit.app/)
 
----
 
-## 🚀 Funcionalidades atuais
+## Funcionalidades atuais
 
 - Busca por nome da escola com exibição de dados (endereço, telefone, UEx etc.)
 - Registro de ligações conforme roteiro estruturado
@@ -20,7 +17,6 @@ O sistema permite registrar chamadas telefônicas realizadas para escolas, verif
 - Agendamento de conversas futuras
 - Armazenamento local em arquivos Excel (`ligacoes.xlsx` e `escolas.xlsx`)
 
----
 
 ## 🛠️ Requisitos para execução local
 
